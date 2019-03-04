@@ -1,6 +1,6 @@
 #CS 353 - Database Systems Management Spring 2019
 
-Group Members
+Group 4
 
 Mehmet EgeAcıcan - 21602186<br/>
 Koray Gürses - 21401254<br/>
