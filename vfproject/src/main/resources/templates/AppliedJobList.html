@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org/" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 12%;
+  opacity: 0.9;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  #users {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#users tr:hover {background-color: #ddd;}
+
+#users th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<body>
+<ul>
+  <li><a href="/UserPage">Home</a></li>
+  <li><a href="/SearchJobByNameOrCompany">Search Job</a></li>
+  <li><a href="/SearchCompany">Search Company</a></li>
+  <li><a href="/SubmitReview">Submit Review</a></li>
+  <li><a href="/ViewReview">View Review</a></li>
+  <li><a href="/ViewInterviewReview">View Interview Review</a></li>  
+  <li><a href="/Following">Following</a></li>
+  <li><a href="/AppliedJobList">Applied Job List</a></li>
+  <li><a href="/Settings">Settings</a></li>
+  <li><a href="/Logout">Logout</a></li>
+</ul>
+<hr></hr>
+<table id = "users"> 
+		<tr>
+			<th>Company Name</th>
+			<th>Company Email</th>
+			<th>Job Name</th>
+			<th>Salary</th>
+			<th>Job Description</th>
+			<th>Position</th>
+			
+		</tr>
+		<tr th:each="app: ${appList}">
+			<td th:text = "${app.Company.CompanyName}"/>
+			<td th:text = "${app.Company.CompanyEmail}"/>
+			<td th:text = "${app.Job.jobName}"/>
+			<td th:text = "${app.Job.salary}"/>
+			<td th:text = "${app.Job.jobDesc}"/>
+			<td th:text = "${app.Job.position}"/>
+			
+			
+		</tr>
+		
+	</table>
+</body>
+</html>

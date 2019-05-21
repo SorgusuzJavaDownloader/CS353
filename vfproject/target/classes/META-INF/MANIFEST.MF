@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: vfproject
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Trixle
+Implementation-Vendor-Id: fproject
+Build-Jdk: 1.8.0_141
+Implementation-URL: http://projects.spring.io/spring-boot/vfproject/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

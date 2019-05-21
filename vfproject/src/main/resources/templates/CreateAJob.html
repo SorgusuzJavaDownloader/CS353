@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title></title>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body {
+
+	background-color: white;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type=text] {
+  width: 15%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+}
+</style>
+<body>
+<ul>
+  <li><a href="/CompanyPage">Home</a></li>
+  <li><a href="/CreateAJob">Create a Job</a></li>
+  <li><a href="/ViewApplicants">View Applicants</a></li>
+  <li><a href="/CompanyViewReview">View Review</a></li>
+  <li><a href="/ViewInterviewReview">View Interview Review</a></li>  
+  <li><a href="/Hires">Employees</a></li>
+  <li><a href="/CompanySettings">Settings</a></li>
+  <li><a href="/Initpage">Logout</a></li>
+</ul>
+<hr></hr>
+<form action="/CreateAJob" method="POST">
+	<div class="container">
+
+		<hr></hr>
+		<label for="JobName"><b>Enter Job Name</b></label><br></br>
+		<input type="text" name="JobName" value="" id="JobName"/><br></br>
+		
+		<label for="JobDescription"><b>Enter Job Description</b></label><br></br>
+		<textarea name="JobDescription" id="JobDescription" rows="8" cols="32"></textarea><br></br>
+		<br></br>
+		<label for="Position"><b>Enter Job Position</b></label><br></br>
+		<input type="text" name="Position" value="" id="Position"/><br></br>
+		
+		<label for="Salary"><b>Enter Job Salary</b></label><br></br>
+		<input type="text" name="Salary" value="" id="Salary"/><br></br>
+		
+		<button type="submit" class="signupbtn">Create a Job</button>
+	</div>
+</form>
+</body>
+</html>

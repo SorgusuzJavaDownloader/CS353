@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org/" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>User Page</title>
+
+
+</head>
+<style>
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+}
+
+</style>
+<body>
+<h1>Your Company ID is:</h1>
+<h1 th:text="${CompID}"></h1>
+<h1>Please keep it safe</h1>
+<button class = "button"  onclick="location.href = 'CompanyLogin'"> <p1> To Company Login </p1> </button>
+
+</body>
+</html>

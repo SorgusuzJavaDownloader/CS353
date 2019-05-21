@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org/" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+input[type=text] {
+  width: 10%;
+  padding: 14px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  margin: 6px 0;
+  width: 14%;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+<body>
+<ul>
+  <li><a href="/UserPage">Home</a></li>
+  <li><a href="/SearchJobByNameOrCompany">Search Job</a></li>
+  <li><a href="/SearchCompany">Search Company</a></li>
+  <li><a href="/SubmitReview">Submit Review</a></li>
+  <li><a href="/ViewReview">View Review</a></li>
+  <li><a href="/ViewInterviewReview">View Interview Review</a></li>
+  <li><a href="/Following">Following</a></li>
+  <li><a href="/AppliedJobList">Applied Job List</a></li>
+  <li><a href="/Settings">Settings</a></li>
+  <li><a href="/Initpage">Logout</a></li>
+</ul>
+
+<hr></hr>
+
+<b>Select Your Review Type</b>
+<div class="dropdown">
+  <button class="dropbtn">Interview Review</button>
+  <div class="dropdown-content">
+    <form action="/SubmitReview" method="POST">
+  	<input type = "hidden" name="CompanyName" th:value="${CompanyName}"/>
+  	<input type = "submit" name="SubmitReview" value="Employee Review"/> 
+  	</form>
+  </div>
+</div>
+<hr></hr>
+<form action="/PostInterviewReview" method="POST">
+	<div class="container">
+	
+		<label for="InterviewProcess"><b>Write the Interview Process</b></label><br></br>
+		<textarea name="InterviewProcess" id="InterviewProcess" rows="8" cols="32"></textarea><br></br>
+		<input type = "hidden" name="CompanyName" th:value="${CompanyName}"/>	
+		<button type="submit" class="reviewbtn">Post Review</button>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title></title>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+</head>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type=text] {
+  width: 15%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=password] {
+  width: 10%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+<body>
+<ul>
+  <li><a href="/CompanyPage">Home</a></li>
+  <li><a href="/CreateAJob">Create a Job</a></li>
+  <li><a href="/ViewApplicants">View Applicants</a></li>
+  <li><a href="/CompanyViewReview">View Review</a></li>
+  <li><a href="/ViewInterviewReview">View Interview Review</a></li>  
+  <li><a href="/Hires">Employees</a></li>
+  <li><a href="/CompanySettings">Settings</a></li>
+  <li><a href="/Initpage">Logout</a></li>
+</ul>
+<hr></hr>
+<form action="/CompanySettings" method="POST">
+	<div class="container">
+		<h1>Settings</h1>
+		<hr></hr>
+		<label for="CompanyName"><b>Change Your Company Name</b></label><br></br>
+		<input type="text" name="CompanyName" placeholder="Enter Name" value="" id="CompanyName"/>
+		<Button type="submit" name ="nameButton">Update</Button>
+	</div>
+</form>
+<br></br>
+
+<form action="/CompanySettingsEmail" method="POST">
+	<div class="container">		
+		<label for="CompanyEmail"><b>Update Your Company Email</b></label><br></br>
+		<input type="text" name="CompanyEmail" placeholder="Enter Email" value="" id="CompanyEmail"/>
+		<Button type="submit" name ="emailButton">Update</Button>
+	</div>
+</form>
+<br></br>
+<form action="/CompanySettingsAddress" method="POST">
+	<div class="container">
+		<label for="CompanyAddress"><b>Update Your Company Address</b></label><br></br>
+		<input type="text" name="CompanyAddress" placeholder="Enter Address" value="" id="CompanyAddress"/>
+		<Button type="submit" name ="addressButton">Update</Button>
+	</div>
+</form>
+</body>
+</html>
