@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>Settings </title>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+</head>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+input[type=text] {
+  width: 15%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=password] {
+  width: 10%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 8%;
+  opacity: 0.9;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+<body>
+<ul>
+  <li><a href="/UserPage">Home</a></li>
+  <li><a href="/SearchJobByNameOrCompany">Search Job</a></li>
+  <li><a href="/SearchCompany">Search Company</a></li>
+  <li><a href="/SubmitReview">Submit Review</a></li>
+  <li><a href="/ViewReview">View Review</a></li>
+  <li><a href="/ViewInterviewReview">View Interview Review</a></li>
+  <li><a href="/Following">Following</a></li>
+  <li><a href="/AppliedJobList">Applied Job List</a></li>
+  <li><a href="/Settings">Settings</a></li>
+  <li><a href="/Logout">Logout</a></li>
+</ul>
+<hr></hr>
+<form action="/Settings" method="POST">
+	<div class="container">
+		<h1>Settings</h1>
+		<hr></hr>
+		<label for="password"><b>Change Your Password</b></label><br></br>
+		<input type="text" name="password" placeholder="Enter Password" value="" id="password"/>
+		<Button type="submit" name ="passwordButton">Update</Button>
+	</div>
+</form>
+		<br></br>
+<form action="/SettingsResume" method="POST">
+	<div class="container">	
+		<label for="resume"><b>Update Your Resume</b></label><br></br>
+		<textarea name="resume" id="resume" rows="8" cols="32"></textarea><br></br>
+		<Button type="submit" name ="resumeButton">Update</Button>
+	</div>
+</form>
+		<br></br>
+		<form action="/SettingsEmail" method="POST">
+	<div class="container">		
+		<label for="email"><b>Update Your Email</b></label><br></br>
+		<input type="text" name="email" placeholder="Enter Email" value="" id="email"/>
+		<Button type="submit" name ="emailButton">Update</Button>
+	</div>
+</form>
+<br></br>
+<form action="/SettingsAddress" method="POST">
+	<div class="container">
+		<label for="address"><b>Update Your Address</b></label><br></br>
+		<input type="text" name="address" placeholder="Enter Address" value="" id="address"/>
+		<Button type="submit" name ="addressButton">Update</Button>
+	</div>
+</form>
+		<br></br>
+<form action="/SettingsPhoneNum" method="POST">
+	<div class="container">		
+		<label for="phoneNum"><b>Update Your Phone Number</b></label><br></br>
+		<input type="text" name="phoneNum" placeholder="Enter Phone Number" value="" id="phoneNum"/>
+		<Button type="submit" name ="phoneNumButton">Update</Button>
+	</div>
+</form>
+</body>
+</html>
